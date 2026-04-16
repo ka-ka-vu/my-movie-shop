@@ -5,79 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cửa Hàng Phim Online</title>
     <style>
-        :root { --primary: #e50914; --dark: #141414; --light: #ffffff; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--dark); color: var(--light); margin: 0; }
-        header { text-align: center; padding: 50px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1350&q=80'); background-size: cover; }
-        .container { max-width: 1100px; margin: auto; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .movie-card { background: #2f2f2f; border-radius: 10px; overflow: hidden; transition: 0.3s; border: 1px solid #444; }
-        .movie-card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .movie-card img { width: 100%; height: 400px; object-fit: cover; }
-        .info { padding: 20px; text-align: center; }
-        .price { color: var(--primary); font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        footer { text-align: center; padding: 40px; color: #777; }
+        :root { --primary: #e50914; --dark: #141414; --light: #ffffff; --gray: #b3b3b3; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--dark); color: var(--light); margin: 0; line-height: 1.6; }
+        
+        header { 
+            text-align: center; 
+            padding: 80px 20px; 
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1350&q=80'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container { 
+            max-width: 1200px; 
+            margin: auto; 
+            padding: 40px 20px; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 30px; 
+        }
+
+        .movie-card { 
+            background: #1f1f1f; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            transition: all 0.3s ease; 
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .movie-card img { width: 100%; height: 450px; object-fit: cover; }
+
+        .info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        
+        .info h3 { margin: 0 0 5px 0; font-size: 1.4rem; color: var(--light); }
+        
+        .genre { 
+            color: var(--primary); 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            font-weight: bold; 
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .description { 
+            color: var(--gray); 
+            font-size: 0.95rem; 
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Giới hạn 3 dòng mô tả */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .price { 
+            font-size: 1.6rem; 
+            font-weight: bold; 
+            margin-bottom: 15px; 
+            color: #4cd137; /* Màu xanh lá cho giá tiền nổi bật */
+        }
+
+        .btn { 
+            display: block; 
+            background: var(--primary); 
+            color: white; 
+            padding: 12px; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .btn:hover { background: #b20710; }
+
+        footer { text-align: center; padding: 60px 20px; color: #555; border-top: 1px solid #333; margin-top: 40px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>MOVIE STORE</h1>
-    <p>Kho phim chất lượng cao - Đặt hàng nhanh chóng</p>
+    <h1 style="font-size: 3rem; margin: 0;">MOVIE STORE</h1>
+    <p style="font-size: 1.2rem; color: var(--gray);">Trải nghiệm điện ảnh đỉnh cao tại nhà</p>
 </header>
 
 <div class="container">
     <div class="movie-card">
         <img src="https://picsum.photos/id/10/400/600" alt="Phim 1">
         <div class="info">
-            <h3>Tên Bộ Phim 01</h3>
+            <span class="genre">Hành Động | Viễn Tưởng</span>
+            <h3>Cuộc Chiến Cuối Cùng</h3>
+            <p class="description">Một nhóm chiến binh dũng cảm phải đứng lên chống lại thế lực đen tối để bảo vệ hành tinh xanh khỏi sự hủy diệt.</p>
             <p class="price">150.000đ</p>
-            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+            <a href="https://forms.gle/ix1gYK98fhKfdgaW7" class="btn">Mua Phim Ngay</a>
         </div>
     </div>
+
     <div class="movie-card">
         <img src="https://picsum.photos/id/20/400/600" alt="Phim 2">
         <div class="info">
-            <h3>Tên Bộ Phim 02</h3>
+            <span class="genre">Kinh Dị | Bí Ẩn</span>
+            <h3>Tiếng Gọi Trong Đêm</h3>
+            <p class="description">Sau khi chuyển đến ngôi nhà mới, gia đình nọ bắt đầu nghe thấy những âm thanh kỳ lạ phát ra từ tầng hầm bí mật.</p>
             <p class="price">120.000đ</p>
-            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+            <a href="https://forms.gle/ix1gYK98fhKfdgaW7" class="btn">Mua Phim Ngay</a>
         </div>
     </div>
+
     <div class="movie-card">
         <img src="https://picsum.photos/id/30/400/600" alt="Phim 3">
         <div class="info">
-            <h3>Tên Bộ Phim 03</h3>
+            <span class="genre">Hoạt Hình | Phiêu Lưu</span>
+            <h3>Hành Trình Kỳ Thú</h3>
+            <p class="description">Chuyến phiêu lưu đầy màu sắc của chú gấu nhỏ và những người bạn đi tìm vùng đất hứa trong truyền thuyết.</p>
             <p class="price">190.000đ</p>
-            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+            <a href="https://forms.gle/ix1gYK98fhKfdgaW7" class="btn">Mua Phim Ngay</a>
         </div>
     </div>
+
     <div class="movie-card">
-        <img src="https://picsum.photos/id/40/400/600" alt="Phim 4">
+        <img src="https://picsum.photos/id/42/400/600" alt="Phim 4">
         <div class="info">
-            <h3>Tên Bộ Phim 04</h3>
+            <span class="genre">Tâm Lý | Lãng Mạn</span>
+            <h3>Bản Tình Ca Mùa Thu</h3>
+            <p class="description">Câu chuyện tình yêu đầy cảm động giữa hai con người xa lạ vô tình gặp nhau trong một buổi chiều mưa tại Paris.</p>
             <p class="price">200.000đ</p>
-            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+            <a href="https://forms.gle/ix1gYK98fhKfdgaW7" class="btn">Mua Phim Ngay</a>
         </div>
     </div>
+
     <div class="movie-card">
         <img src="https://picsum.photos/id/50/400/600" alt="Phim 5">
         <div class="info">
-            <h3>Tên Bộ Phim 05</h3>
+            <span class="genre">Hài Hước | Gia Đình</span>
+            <h3>Bố Tôi Là Siêu Anh Hùng</h3>
+            <p class="description">Cuộc sống đảo lộn của một ông bố vụng về khi đột nhiên phát hiện mình sở hữu sức mạnh phi thường.</p>
             <p class="price">99.000đ</p>
-            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+            <a href="https://forms.gle/ix1gYK98fhKfdgaW7" class="btn">Mua Phim Ngay</a>
         </div>
     </div>
+
     <div class="movie-card">
         <img src="https://picsum.photos/id/60/400/600" alt="Phim 6">
         <div class="info">
-            <h3>Tên Bộ Phim 06</h3>
+            <span class="genre">Tài Liệu | Khám Phá</span>
+            <h3>Đại Dương Huyền Bí</h3>
+            <p class="description">Khám phá những sinh vật kỳ lạ và những cảnh quan tuyệt đẹp sâu dưới lòng đại dương mà con người chưa từng biết tới.</p>
             <p class="price">180.000đ</p>
-            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+            <a href="https://forms.gle/ix1gYK98fhKfdgaW7" class="btn">Mua Phim Ngay</a>
         </div>
     </div>
 </div>
 
 <footer>
-    &copy; 2024 Movie Store - Powered by Google Forms
+    <p>&copy; 2026 Movie Store. Bản quyền thuộc về bạn.</p>
+    <p style="font-size: 0.8rem;">Dịch vụ thanh toán an toàn qua Google Forms & Sheets</p>
 </footer>
 
 </body>
