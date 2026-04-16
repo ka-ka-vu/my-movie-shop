@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Phim Online</title>
+    <style>
+        :root { --primary: #e50914; --dark: #141414; --light: #ffffff; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--dark); color: var(--light); margin: 0; }
+        header { text-align: center; padding: 50px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1350&q=80'); background-size: cover; }
+        .container { max-width: 1100px; margin: auto; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .movie-card { background: #2f2f2f; border-radius: 10px; overflow: hidden; transition: 0.3s; border: 1px solid #444; }
+        .movie-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .movie-card img { width: 100%; height: 400px; object-fit: cover; }
+        .info { padding: 20px; text-align: center; }
+        .price { color: var(--primary); font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        footer { text-align: center; padding: 40px; color: #777; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MOVIE STORE</h1>
+    <p>Kho phim chất lượng cao - Đặt hàng nhanh chóng</p>
+</header>
+
+<div class="container">
+    <div class="movie-card">
+        <img src="https://picsum.photos/id/10/400/600" alt="Phim 1">
+        <div class="info">
+            <h3>Tên Bộ Phim 01</h3>
+            <p class="price">150.000đ</p>
+            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img src="https://picsum.photos/id/20/400/600" alt="Phim 2">
+        <div class="info">
+            <h3>Tên Bộ Phim 02</h3>
+            <p class="price">120.000đ</p>
+            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img src="https://picsum.photos/id/30/400/600" alt="Phim 3">
+        <div class="info">
+            <h3>Tên Bộ Phim 03</h3>
+            <p class="price">190.000đ</p>
+            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img src="https://picsum.photos/id/40/400/600" alt="Phim 4">
+        <div class="info">
+            <h3>Tên Bộ Phim 04</h3>
+            <p class="price">200.000đ</p>
+            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img src="https://picsum.photos/id/50/400/600" alt="Phim 5">
+        <div class="info">
+            <h3>Tên Bộ Phim 05</h3>
+            <p class="price">99.000đ</p>
+            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+        </div>
+    </div>
+    <div class="movie-card">
+        <img src="https://picsum.photos/id/60/400/600" alt="Phim 6">
+        <div class="info">
+            <h3>Tên Bộ Phim 06</h3>
+            <p class="price">180.000đ</p>
+            <a href="LINK_GOOGLE_FORM_CUA_BAN" class="btn">Đặt Phim Ngay</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Movie Store - Powered by Google Forms
+</footer>
+
+</body>
+</html>
